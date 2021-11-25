@@ -2,8 +2,6 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import todoSlice from "./todoSlice";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-
 const store = configureStore({
   reducer: { todos: todoSlice.reducer },
 });
