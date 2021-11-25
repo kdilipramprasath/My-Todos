@@ -9,7 +9,7 @@ const Todos = () => {
   const dispatch = useDispatch();
 
   return (
-    <>
+    <div className="mb-5">
       {todos.length > 0 ? (
         <>
           <h2 className="h-4 fw-light border-bottom pb-2 mb-4">Todo[s]</h2>
@@ -37,7 +37,7 @@ const Todos = () => {
       ) : (
         <h2 className="h-4 fw-light text-center">No Todo[s] Found!</h2>
       )}
-    </>
+    </div>
   );
 };
 
