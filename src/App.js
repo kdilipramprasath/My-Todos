@@ -1,18 +1,12 @@
 import { useState } from "react";
-
-import { useSelector, useDispatch } from "react-redux";
-
+import { useDispatch } from "react-redux";
 import { todoAction } from "./store/todoSlice";
-
 import { Container } from "react-bootstrap";
-
 import TodoForm from "./components/TodoForm";
 import Todos from "./components/Todos";
-
 import { idGen } from "./utilities/utils";
 
 function App() {
-  const { todos } = useSelector((store) => store.todos);
   const dispatch = useDispatch();
   const [todoInput, setTodoInput] = useState("");
 

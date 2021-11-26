@@ -8,11 +8,11 @@ const TodoForm = ({ submitHandler, todoInput, todoInputHandler }) => {
           <InputGroup>
             <InputGroup.Text>Todo</InputGroup.Text>
             <Form.Control
-              aria-describedby="todo-input"
               type="text"
               id="todo-input"
               value={todoInput}
               onChange={todoInputHandler}
+              required
             />
           </InputGroup>
         </Col>

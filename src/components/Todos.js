@@ -1,12 +1,9 @@
-import { useSelector, useDispatch } from "react-redux";
-
-import { todoAction } from "../store/todoSlice";
-
-import { ListGroup, Button } from "react-bootstrap";
+import { useSelector } from "react-redux";
+import { ListGroup } from "react-bootstrap";
+import Todo from "./Todo";
 
 const Todos = () => {
   const { todos } = useSelector((store) => store.todos);
-  const dispatch = useDispatch();
 
   return (
     <div className="mb-5">
@@ -17,18 +14,7 @@ const Todos = () => {
             {todos.map((todo) => {
               return (
                 <ListGroup.Item key={todo.id}>
-                  <div className="d-flex align-items-center justify-content-between">
-                    <span>{todo.todo}</span>
-
-                    <Button
-                      variant="danger"
-                      onClick={() =>
-                        dispatch(todoAction.removeTodo({ id: todo.id }))
-                      }
-                    >
-                      Delete
-                    </Button>
-                  </div>
+                  <Todo {...todo} />
                 </ListGroup.Item>
               );
             })}
