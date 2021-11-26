@@ -36,7 +36,7 @@ const Todo = ({ id, todo }) => {
               autoFocus
             />
 
-            <Button>Update</Button>
+            <Button type="submit">Update</Button>
           </InputGroup>
         </Form>
       )}
